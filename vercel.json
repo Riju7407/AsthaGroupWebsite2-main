@@ -1,7 +1,0 @@
-{
-  "buildCommand": "cd client && npm install && npm run build",
-  "outputDirectory": "client/build",
-  "env": {
-    "REACT_APP_API_URL": "https://eirs-project.vercel.app/api"
-  }
-}
