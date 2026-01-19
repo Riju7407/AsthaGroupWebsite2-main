@@ -23,9 +23,5 @@
       "dest": "client/build/index.html",
       "status": 200
     }
-  ],
-  "env": {
-    "MONGO_URL": "@mongo_url",
-    "JWT_SECRET": "@jwt_secret"
-  }
+  ]
 }
