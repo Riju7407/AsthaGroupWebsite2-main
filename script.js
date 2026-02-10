@@ -43,3 +43,40 @@ document.querySelectorAll('.slider').forEach(slider => {
 //   prev.addEventListener("click", () => {
 //     slider.scrollBy({ left: -280, behavior: "smooth" });
 //   });
+
+
+// ================= HERO CAROUSEL =================//
+const heroCarousel = document.getElementById('heroCarousel');
+if (heroCarousel) {
+  const indicators = document.querySelectorAll('.carousel-indicators .indicator');
+  const slides = document.querySelectorAll('.carousel-slide');
+  let currentSlide = 0;
+  const totalSlides = slides.length;
+  
+  // Function to update active indicator
+  function updateIndicators() {
+    indicators.forEach((indicator, index) => {
+      indicator.classList.remove('active');
+      if (index === currentSlide) {
+        indicator.classList.add('active');
+      }
+    });
+  }
+  
+  // Initialize first indicator as active
+  updateIndicators();
+  
+  // Auto-rotate carousel every 8 seconds
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateIndicators();
+  }, 8000);
+  
+  // Click on indicators to go to specific slide
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      currentSlide = index;
+      updateIndicators();
+    });
+  });
+}

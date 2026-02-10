@@ -362,6 +362,194 @@ body {
   padding:20px;
 }
 
+/* ===== HERO CAROUSEL ===== */
+.hero-carousel {
+  margin-top: 80px;
+  height: 420px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.carousel-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+/* 3 slides carousel */
+#heroCarousel:has(.carousel-slide:nth-child(3):last-child) .carousel-slide {
+  animation: fadeCarousel3 24s ease-in-out infinite;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(3):last-child) .carousel-slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(3):last-child) .carousel-slide:nth-child(2) {
+  animation-delay: -8s;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(3):last-child) .carousel-slide:nth-child(3) {
+  animation-delay: -16s;
+}
+
+/* 6 slides carousel */
+#heroCarousel:has(.carousel-slide:nth-child(6):last-child) .carousel-slide {
+  animation: fadeCarousel6 48s ease-in-out infinite;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(6):last-child) .carousel-slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(6):last-child) .carousel-slide:nth-child(2) {
+  animation-delay: -8s;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(6):last-child) .carousel-slide:nth-child(3) {
+  animation-delay: -16s;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(6):last-child) .carousel-slide:nth-child(4) {
+  animation-delay: -24s;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(6):last-child) .carousel-slide:nth-child(5) {
+  animation-delay: -32s;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(6):last-child) .carousel-slide:nth-child(6) {
+  animation-delay: -40s;
+}
+
+/* 10 slides carousel */
+#heroCarousel:has(.carousel-slide:nth-child(10):last-child) .carousel-slide {
+  animation: fadeCarousel10 80s ease-in-out infinite;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(10):last-child) .carousel-slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(10):last-child) .carousel-slide:nth-child(2) {
+  animation-delay: -8s;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(10):last-child) .carousel-slide:nth-child(3) {
+  animation-delay: -16s;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(10):last-child) .carousel-slide:nth-child(4) {
+  animation-delay: -24s;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(10):last-child) .carousel-slide:nth-child(5) {
+  animation-delay: -32s;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(10):last-child) .carousel-slide:nth-child(6) {
+  animation-delay: -40s;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(10):last-child) .carousel-slide:nth-child(7) {
+  animation-delay: -48s;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(10):last-child) .carousel-slide:nth-child(8) {
+  animation-delay: -56s;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(10):last-child) .carousel-slide:nth-child(9) {
+  animation-delay: -64s;
+}
+
+#heroCarousel:has(.carousel-slide:nth-child(10):last-child) .carousel-slide:nth-child(10) {
+  animation-delay: -72s;
+}
+
+@keyframes fadeCarousel3 {
+  0%, 100% { opacity: 0; }
+  4.17%, 37.5% { opacity: 1; }
+}
+
+@keyframes fadeCarousel6 {
+  0%, 100% { opacity: 0; }
+  4.17%, 20.83% { opacity: 1; }
+}
+
+@keyframes fadeCarousel10 {
+  0%, 100% { opacity: 0; }
+  2.5%, 12.5% { opacity: 1; }
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+.carousel-overlay h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.carousel-overlay p {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 20;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.indicator.active {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.2);
+}
+
 /* ===== ABOUT SECTION ===== */
 .about-section {
   padding: 80px 10%;
