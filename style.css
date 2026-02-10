@@ -390,7 +390,7 @@ body {
 
 /* 3 slides carousel */
 #heroCarousel:has(.carousel-slide:nth-child(3):last-child) .carousel-slide {
-  animation: fadeCarousel3 24s ease-in-out infinite;
+  animation: fadeCarousel3 24s steps(1, end) infinite;
 }
 
 #heroCarousel:has(.carousel-slide:nth-child(3):last-child) .carousel-slide:nth-child(1) {
@@ -407,7 +407,7 @@ body {
 
 /* 6 slides carousel */
 #heroCarousel:has(.carousel-slide:nth-child(6):last-child) .carousel-slide {
-  animation: fadeCarousel6 48s ease-in-out infinite;
+  animation: fadeCarousel6 48s steps(1, end) infinite;
 }
 
 #heroCarousel:has(.carousel-slide:nth-child(6):last-child) .carousel-slide:nth-child(1) {
@@ -436,7 +436,7 @@ body {
 
 /* 10 slides carousel */
 #heroCarousel:has(.carousel-slide:nth-child(10):last-child) .carousel-slide {
-  animation: fadeCarousel10 80s ease-in-out infinite;
+  animation: fadeCarousel10 80s steps(1, end) infinite;
 }
 
 #heroCarousel:has(.carousel-slide:nth-child(10):last-child) .carousel-slide:nth-child(1) {
@@ -480,18 +480,24 @@ body {
 }
 
 @keyframes fadeCarousel3 {
-  0%, 100% { opacity: 0; }
-  4.17%, 37.5% { opacity: 1; }
+  0% { opacity: 1; }
+  33.33% { opacity: 1; }
+  33.34% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 @keyframes fadeCarousel6 {
-  0%, 100% { opacity: 0; }
-  4.17%, 20.83% { opacity: 1; }
+  0% { opacity: 1; }
+  16.67% { opacity: 1; }
+  16.68% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 @keyframes fadeCarousel10 {
-  0%, 100% { opacity: 0; }
-  2.5%, 12.5% { opacity: 1; }
+  0% { opacity: 1; }
+  10% { opacity: 1; }
+  10.1% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 .carousel-overlay {
