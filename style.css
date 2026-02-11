@@ -882,6 +882,27 @@ body {
   text-align: left;
 }
 
+.project-card-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.project-card-text {
+  flex: 1;
+}
+
+.project-card-image {
+  flex: 0 0 350px;
+}
+
+.project-card-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
 .project-card h3 {
   font-size: 26px;
   margin-bottom: 20px;
@@ -903,6 +924,16 @@ body {
 
   .project-card {
     padding: 25px;
+  }
+
+  .project-card-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .project-card-image {
+    flex: 0 0 auto;
+    max-width: 100%;
   }
 }
 
