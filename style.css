@@ -1077,4 +1077,66 @@ body {
   .about-banner-overlay h1 {
     font-size: 30px;
   }
+
+  /* Career Page Mobile Responsive */
+  .why-choose-us {
+    padding: 50px 20px;
+  }
+
+  .why-choose-us h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+
+  .why-card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .why-card i {
+    font-size: 24px;
+  }
+
+  .why-card h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .why-card p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .about-section {
+    padding: 40px 20px !important;
+  }
+
+  .about-left h2 {
+    font-size: 24px;
+  }
+
+  .about-left p {
+    font-size: 15px;
+  }
+
+  .mission-vision {
+    padding: 40px 20px;
+  }
+
+  .mv-box {
+    padding: 25px;
+  }
+
+  .mv-box h3 {
+    font-size: 18px;
+  }
+
+  .mv-box p {
+    font-size: 14px;
+  }
 }
