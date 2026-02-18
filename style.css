@@ -303,19 +303,19 @@ body {
 }
 
 .team-card {
-  min-width: 260px;
+  min-width: 320px;
   background: #fff;
   border-radius: 16px;
-  padding: 18px;
+  padding: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .team-card img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 3/4;
+  height: 380px;
   object-fit: cover;
   border-radius: 14px;
+  display: block;
 }
 
 .team-card h4 {
